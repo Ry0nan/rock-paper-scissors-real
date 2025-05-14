@@ -1,0 +1,15 @@
+.choice-button {
+    cursor: pointer;
+}
+
+.scoreDisplay {
+    font-size: 2rem;
+}
+
+.green-text, #playerScoreDisplay {
+    color: green;
+}
+
+.red-text, #computerScoreDisplay {
+    color: red;
+}
