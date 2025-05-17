@@ -47,7 +47,7 @@ function playGame(playerChoice) {
     }
 
     playerDisplay.textContent = `Player: ${playerChoice}`;
-    computerDisplay.textContent = `Computer: ${computerChoice}`;
+    computerDisplay.textContent = `Teto: ${computerChoice}`;
     resultsDisplay.textContent = result;
 
     resultsDisplay.classList.remove("green-text", "red-text")
