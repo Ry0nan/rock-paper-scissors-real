@@ -1,15 +1,52 @@
+/* change the cursor to pointer when picking choices */
 .choice-button {
     cursor: pointer;
 }
 
+/* display score font size */
 .scoreDisplay {
     font-size: 2rem;
 }
 
+/* change the score to green */
 .green-text, #playerScoreDisplay {
     color: green;
 }
 
+/* change the score to red */
 .red-text, #computerScoreDisplay {
     color: red;
+}
+
+/* gradient pink for the page */
+.bg-pink-gradient {
+    background: linear-gradient(
+      135deg,
+      #ff9ecf 0%,
+      #ff5fa1 50%,
+      #ff1e6b 100%
+    ),
+    var(--bs-gradient);
+}
+
+/* header font */
+.arcade-font {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem; 
+  letter-spacing: 0.05em;
+}
+
+/* header font color */
+.text-red-pal {
+  color: #ff0045;
+}
+
+/* header background */
+#header header {
+  background: #06053b;     
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.player-vs-teto-container {
+    background: #3f4750;
 }

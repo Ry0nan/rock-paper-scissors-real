@@ -14,37 +14,45 @@
   <!-- my own styles -->
   <link rel="stylesheet" href="./css/styles.css">
 
+  <!-- Google “Press Start 2P” arcade font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
   <section id="header">
-          <!-- Leading text for the website explaining its function -->
-      <header class="bg-dark text-white">
-        <div class="container p-3">
-          <div class="row">
-
-            <!-- column for the teto image -->
-            <div class="col-4 d-flex justify-content-end">
-              <img src="./assets/teto-ssets/teto-tetoris.gif" alt="tetoris" width="80" height="80">
-            </div>
-
-            <!-- div for the Phone text -->
-            <div class="col-8  d-flex justify-content-start align-items-center text-center">
-              <h2> Phone Baguette Leek</h2>
-            </div>
-
-          </div>
-        </div>
-      </header>
-
+    <header class="d-flex justify-content-center align-items-center py-3">
+      <div class="d-flex align-items-center">
+        <!-- Teto GIF -->
+        <img 
+          src="./assets/teto-ssets/teto-tetoris.gif" 
+          alt="tetoris" 
+          width="80" 
+          height="80" 
+          class="me-3"
+        >
+        <!-- arcade-style title -->
+        <h1 class="mb-0 arcade-font text-red-pal">Phone Baguette Leek</h1>
+      </div>
+    </header>
   </section>
-    <div class="container text-center">
-      <!-- container for the images of the choices-->
-      <div class="container my-5">
-        <div class="row justify-content-center align-items-center">
 
-          <div class="col-auto mx-5">
-            <img src="./assets/person-svgrepo-com.svg" alt="player-icon" height="150" width="150">
+  <!-- entire page body -->
+  <div class="bg-pink-gradient min-vh-100">
+
+    <!-- explanation section -->
+    <div class="container p-5 text-center">
+      <h3> Choose Your Weapon! </h3>
+      <p class="lead"> Rock = Phone; Paper = Baguette; Scissors = Leek </p>
+    </div>
+
+    <div class="container text-center">
+      <!-- container for the images -->
+      <div class="container p-5">
+        <div class="row justify-content-center align-items-center player-vs-teto-container">
+
+          <div class="col-auto mx-5 my-5">
+            <img src="./assets/teto-ssets/teto-boing.gif" alt="player-icon" height="200" width="200">
             <p class="lead my-3" id="playerDisplay"> Player </p>
             <div class="scoreDisplay">
                 <span id="playerScoreDisplay"> 0 </span>
@@ -55,8 +63,8 @@
             <h2 class="text-muted"> vs </h2>
           </div>
 
-          <div class="col-auto mx-5">
-            <img src="./assets/teto-ssets/smug-teto.jpg" alt="teto-icon" height="200" width="200" >
+          <div class="col-auto mx-5 my-5">
+            <img src="./assets/teto-ssets/teto-boing.gif" alt="teto-icon" height="200" width="200" >
             <p class="lead my-3" id="computerDisplay"> Teto </p>
             <div class="scoreDisplay">
                 <span id="computerScoreDisplay"> 0 </span>
@@ -66,28 +74,29 @@
         </div>
       </div>
 
-      <h2 id="resultsDisplay"> Who Won? </h2>
-
+      <!-- Results Display-->
+      <div class="container mt-5">
+        <h2 id="resultsDisplay"> Who Won? </h2>
+      </div>
+      
       <!-- 3-button group with images inside -->
       <div class="btn-group my-5 choices" role="group" aria-label="Rock Paper Scissors Choices">
 
         <button type="button choice-button" class="btn btn-outline-dark rock-button" onclick="playGame('rock')">
-            <img src="./assets/rock-svgrepo-com.svg" alt="Rock" class="img-fluid" style="height:8rem;">
+          <p> 📱 </p>
         </button>
 
         <button type="button choice-button" class="btn btn-outline-dark paper-button" onclick="playGame('paper')">
-            <img src="./assets/paper-sheet-svgrepo-com.svg" alt="Paper" class="img-fluid" style="height:8rem;">
+          <p> 🥖 </p>
         </button>
 
         <button type="button choice-button" class="btn btn-outline-dark scissors-button" onclick="playGame('scissors')">
-            <img src="./assets/scissors-svgrepo-com.svg" alt="Scissors" class="img-fluid" style="height:8rem;">
+          <p> 🍅 </p>
         </button>
 
       </div>
-
-
     </div>
-
+  </div>
 
   <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
