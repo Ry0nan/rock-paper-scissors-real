@@ -2,109 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Teto: PBL </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teto: PBL</title>
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-    crossorigin="anonymous">
+    crossorigin="anonymous"
+  >
 
-  <!-- my own styles -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="./css/styles.css">
 
-  <!-- Google “Press Start 2P” arcade font -->
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
+  <!-- Press Start 2P arcade font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+  >
 </head>
-<body>
+<body class="bg-pink text-white d-flex flex-column min-vh-100">
 
+  <!-- Header -->
   <section id="header">
-    <header class="d-flex justify-content-center align-items-center py-3">
+    <header class="d-flex justify-content-center align-items-center py-2 bg-dark">
       <div class="d-flex align-items-center">
-        <!-- Teto GIF -->
-        <img 
-          src="./assets/teto-ssets/teto-tetoris.gif" 
-          alt="tetoris" 
-          width="80" 
-          height="80" 
+        <img
+          src="./assets/teto-ssets/teto-tetoris.gif"
+          alt="tetoris"
+          width="60" height="60"
           class="me-3"
         >
-        <!-- arcade-style title -->
         <h1 class="mb-0 arcade-font text-red-pal">Phone Baguette Leek</h1>
       </div>
     </header>
   </section>
 
-  <!-- entire page body -->
-  <div class="bg-pink-gradient min-vh-100">
-
-    <!-- explanation section -->
-    <div class="container p-5 text-center">
-      <h3> Choose Your Weapon! </h3>
-      <p class="lead"> Rock = Phone; Paper = Baguette; Scissors = Leek </p>
-    </div>
-
-    <div class="container text-center">
-      <!-- container for the images -->
-      <div class="container p-5">
-        <div class="row justify-content-center align-items-center player-vs-teto-container">
-
-          <div class="col-auto mx-5 my-5">
-            <img src="./assets/teto-ssets/teto-boing.gif" alt="player-icon" height="200" width="200">
-            <p class="lead my-3" id="playerDisplay"> Player </p>
-            <div class="scoreDisplay">
-                <span id="playerScoreDisplay"> 0 </span>
-            </div>
-          </div>
-
-          <div class="col-auto mx-5">
-            <h2 class="text-muted"> vs </h2>
-          </div>
-
-          <div class="col-auto mx-5 my-5">
-            <img src="./assets/teto-ssets/teto-boing.gif" alt="teto-icon" height="200" width="200" >
-            <p class="lead my-3" id="computerDisplay"> Teto </p>
-            <div class="scoreDisplay">
-                <span id="computerScoreDisplay"> 0 </span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Results Display-->
-      <div class="container mt-5">
-        <h2 id="resultsDisplay"> Who Won? </h2>
-      </div>
-      
-      <!-- 3-button group with images inside -->
-      <div class="btn-group my-5 choices" role="group" aria-label="Rock Paper Scissors Choices">
-
-        <button type="button choice-button" class="btn btn-outline-dark rock-button" onclick="playGame('rock')">
-          <p> 📱 </p>
-        </button>
-
-        <button type="button choice-button" class="btn btn-outline-dark paper-button" onclick="playGame('paper')">
-          <p> 🥖 </p>
-        </button>
-
-        <button type="button choice-button" class="btn btn-outline-dark scissors-button" onclick="playGame('scissors')">
-          <p> 🍅 </p>
-        </button>
-
-      </div>
-    </div>
+  <!-- Explanation -->
+  <div class="container my-3 text-center explanation">
+    <h3>Choose Your Weapon!</h3>
+    <p class="lead">Phone = Rock; Baguette = Paper; Leek = Scissors</p>
   </div>
 
-  <!-- Bootstrap Bundle JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+  <!-- Main game area -->
+  <div class="container text-center flex-grow-1s">
+
+    <!-- Score panel -->
+    <div class="d-flex justify-content-center my-4">
+      <div class="d-flex align-items-center bg-secondary rounded-3 p-3 player-vs-teto-container">
+        <div class="text-center mx-5">
+          <img src="./assets/teto-ssets/teto-boing.gif" alt="player-icon" width="150" height="150" class="d-block mx-auto">
+          <p class="lead my-2" id="playerDisplay">Player</p>
+          <div class="scoreDisplay"><span id="playerScoreDisplay">0</span></div>
+        </div>
+        <div class="text-center mx-5">
+          <img src="./assets/teto-ssets/teto-boing.gif" alt="teto-icon" width="150" height="150" class="d-block mx-auto">
+          <p class="lead my-2" id="computerDisplay">Teto</p>
+          <div class="scoreDisplay"><span id="computerScoreDisplay">0</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result text -->
+    <div class="container mt-3">
+      <h2 id="resultsDisplay">Who Won?</h2>
+    </div>
+
+    <!-- Choice buttons -->
+    <div class="d-flex justify-content-center my-5 gap-4">
+      <button type="button" class="btn choice-button" onclick="playGame('phone')">
+        <div class="choice-img"><img src="./assets/choices/smartphone.svg" alt="phone"></div>
+        <div class="choice-text border-top pt-2"><p class="mb-0">Phone</p></div>
+      </button>
+      <button type="button" class="btn choice-button" onclick="playGame('baguette')">
+        <div class="choice-img"><img src="./assets/choices/baguette.svg" alt="baguette"></div>
+        <div class="choice-text border-top pt-2"><p class="mb-0">Baguette</p></div>
+      </button>
+      <button type="button" class="btn choice-button" onclick="playGame('leek')">
+        <div class="choice-img"><img src="./assets/choices/leek.svg" alt="leek"></div>
+        <div class="choice-text border-top pt-2"><p class="mb-0">Leek</p></div>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-    crossorigin="anonymous">
-  </script>
-
+    crossorigin="anonymous"
+  ></script>
+  <!-- Game logic -->
   <script src="script.js"></script>
-
 </body>
 </html>
