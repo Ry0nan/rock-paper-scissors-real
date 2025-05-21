@@ -20,6 +20,13 @@ html, body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.5); 
 }
 
+.explanation {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-family: "Space Grotesk", "sans-serif";
+  color:#5e0a20;
+}
+
 .scoreDisplay { 
   font-size: 
   2rem; 
@@ -34,9 +41,15 @@ html, body {
 }
 
 .choice-button {
-  cursor: pointer; display: flex; flex-direction: column; align-items: center;
-  background-color: #ffe4e1; border: none; border-radius: 1rem;
-  padding: 1rem; width: 150px; transition: background-color .2s;
+  cursor: pointer; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  background-color: #ff0045; 
+  border: none; border-radius: 1rem;
+  padding: 1rem; 
+  width: 150px; 
+  transition: background-color .2s;
 }
 
 .choice-button:hover { 
@@ -59,3 +72,4 @@ html, body {
 .choice-text.border-top { 
   border-top: 2px solid #ccc; 
 }
+
