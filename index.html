@@ -56,7 +56,7 @@
     <div class="d-flex justify-content-center my-4">
       <div class="d-flex align-items-center bg-secondary rounded-3 p-3 player-vs-teto-container">
         <div class="text-center mx-5">
-          <img src="./assets/teto-ssets/teto-boing.gif" alt="player-icon" width="150" height="150" class="d-block mx-auto">
+          <img src="./assets/teto-ssets/teto-hmm.gif" alt="player-icon" width="150" height="150" class="d-block mx-auto">
           <p class="lead my-2" id="playerDisplay">Player</p>
           <div class="scoreDisplay"><span id="playerScoreDisplay">0</span></div>
         </div>
@@ -113,6 +113,21 @@
       </ul>
     </footer>
     </div>
+
+    <!-- pop up modal -->
+    <div class="container justify-content-center align-items-center"> 
+      <div id="game-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2 id="modal-title">You Won!</h2>
+        <img id="modal-image" src="images/win.png" alt="Result Image" class="img-fluid mx-auto d-block rounded" />
+        <button id="restart-button">Restart</button>
+      </div>
+      </div>
+    </div>
+    
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
 
   </div>
 
