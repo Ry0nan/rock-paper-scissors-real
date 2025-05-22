@@ -2,24 +2,29 @@ html, body {
   height: 100%; margin: 0;
 }
 
+/* background for the page */
 .bg-pink {
   background-color: #ff9ecf !important;
 }
 
+/* font for the header */
 .arcade-font {
   font-family: 'Press Start 2P', cursive;
   font-size: 1.5rem; letter-spacing: 0.05em;
 }
 
+/* texxt color for the header */
 .text-red-pal { 
   color: #ff0045; 
 }
 
+/* background color for the header */
 #header header { 
   background: #06053b; 
   box-shadow: 0 2px 6px rgba(0,0,0,0.5); 
 }
 
+/* styling for the rules explanation */
 .explanation {
   margin-top: 50px;
   margin-bottom: 30px;
@@ -27,19 +32,23 @@ html, body {
   color:#5e0a20;
 }
 
+/* style for the score display */
 .scoreDisplay { 
   font-size: 
   2rem; 
 }
 
+/* changes the text of the result display to green if the player won */
 .green-text, #playerScoreDisplay { 
   color: green !important; 
 }
 
+/* changes the text of the result display to red if Teto player won */
 .red-text, #computerScoreDisplay { 
   color: red !important; 
 }
 
+/* styling for the choice buttons */
 .choice-button {
   cursor: pointer; 
   display: flex; 
@@ -73,9 +82,7 @@ html, body {
   border-top: 2px solid #ccc; 
 }
 
-/* MODALS */
-
-/* Modal Container */
+/* styling for the modals */
 .modal {
   position: fixed;
   top: 0;
@@ -89,12 +96,12 @@ html, body {
   z-index: 999;
 }
 
-/* Modal Hidden by Default */
+/* modal is hidden by default */
 .hidden {
   display: none;
 }
 
-/* Modal Content Box */
+/* modal box */
 .modal-content {
   background-color: #222; /* Dark background for the box */
   padding: 2rem;
@@ -106,20 +113,20 @@ html, body {
   height: 300px;
 }
 
-/* Title */
+/* modal title */
 .modal-content h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-/* Image */
+/* modal image */
 .modal-content img {
   width: 100px;
   height: 100px;
   margin-bottom: 1rem;
 }
 
-/* Restart Button */
+/* restart button */
 #restart-button {
   background-color: #3498db;
   color: white;
@@ -133,5 +140,28 @@ html, body {
 
 #restart-button:hover {
   background-color: #2980b9;
+}
+
+/* styling for the music player */
+#volume-slider {
+  accent-color: #3498db;
+}
+
+#music-player-card {
+    width: 280px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1050;
+    cursor: move;
+  }
+
+.playlist-item {
+    cursor: pointer;
+}
+  
+.playlist-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
