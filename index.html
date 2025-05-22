@@ -89,6 +89,47 @@
       </button>
     </div>
 
+    <!-- Music Player -->
+    <div id="music-player-card" class="card bg-dark text-white shadow">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <span><i class="bi bi-music-note-beamed me-2"></i>Music Player</span>
+        <button class="btn btn-sm btn-outline-light" data-bs-toggle="collapse" data-bs-target="#music-collapse" aria-expanded="true">
+          <i class="bi bi-chevron-down"></i>
+        </button>
+      </div>
+
+      <div class="collapse show" id="music-collapse">
+        <div class="card-body">
+          <p class="text-center mb-3" id="track-title"> Track: Teto Vibes </p>
+
+          <div class="d-flex justify-content-center gap-2 mb-3">
+            <button id="play-btn" class="btn btn-outline-light btn-sm" title="Play">
+              <i class="bi bi-play-fill"></i>
+            </button>
+            <button id="pause-btn" class="btn btn-outline-light btn-sm" title="Pause">
+              <i class="bi bi-pause-fill"></i>
+            </button>
+            <button id="next-btn" class="btn btn-outline-light btn-sm" title="Next">
+              <i class="bi bi-skip-forward-fill"></i>
+            </button>
+          </div>
+
+          <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.2" class="form-range mb-3">
+
+          <div>
+            <h6 class="text-center">Playlist</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item bg-dark text-white playlist-item" data-src="./assets/sounds/soundtrack/tetoris.mp3"> Tetoris </li>
+              <li class="list-group-item bg-dark text-white playlist-item" data-src="./assets/sounds/soundtrack/override.mp3"> Override </li>
+              <li class="list-group-item bg-dark text-white playlist-item" data-src="./assets/sounds/soundtrack/machine-love.mp3"> Machine Love </li>
+            </ul>
+          </div>
+
+          <audio id="custom-audio" loop></audio>
+        </div>
+      </div>
+    </div>
+
     <!-- footer -->
     <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-secondary">
@@ -101,12 +142,12 @@
 
       <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
         <li class="ms-3">
-          <a class="text-white" href="https://www.instagram.com/ryo9fr?igsh=OHZvc3V0b2hvbHg4" aria-label="Instagram">
+          <a class="text-white" href="" aria-label="Instagram">
             <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
           </a>
         </li>
         <li class="ms-3">
-          <a class="text-white" href="https://www.facebook.com/ryo.yamada.40556" aria-label="Facebook">
+          <a class="text-white" href="" aria-label="Facebook">
             <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
           </a>
         </li>
@@ -139,5 +180,8 @@
   ></script>
   <!-- Game logic -->
   <script src="script.js"></script>
+
+  <!-- Music Player -->
+  <script src="music-player.js"> </script>
 </body>
 </html>
