@@ -12,7 +12,8 @@ const computerScoreDisplay = document.getElementById("computerScoreDisplay");
 // sounds
 const winSound = new Audio('./assets/sounds/sound-effects/teto-crying.mp3');
 const loseSound = new Audio('./assets/sounds/sound-effects/teto-laughing-at-you.mp3');
-winSound.volume = 0.01;
+loseSound.volume = 0.2;
+winSound.volume = 0.8;
 
 const gameModal = document.getElementById("game-modal");
 const overlay = document.getElementById("overlay");
