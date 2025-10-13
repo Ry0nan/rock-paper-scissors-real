@@ -1,2 +1,2 @@
 # rock-paper-scissors-real
-the real rock paper scissors web page I've been working on
+Kasane Teto themed rock paper scissors minigame! 
